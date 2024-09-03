@@ -25,11 +25,11 @@ export default function Login() {
     signInSuccessUrl: window.location.href + "lobby",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      {
-        provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        requireDisplayName: true
-      },
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID
+      // {
+      //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      //   requireDisplayName: true
+      // },
+      // firebase.auth.TwitterAuthProvider.PROVIDER_ID
     ],
     callbacks: {
       // Avoid Navigates after sign-in.
