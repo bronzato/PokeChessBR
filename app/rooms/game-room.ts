@@ -708,6 +708,18 @@ export default class GameRoom extends Room<GameState> {
             if (usr.level >= 300) {
               player.titles.add(Title.GRAND_MASTER)
             }
+            
+            const uidPremierBall = new Set([
+              "5AJIOdDWlzSq23BfBEzf6eKSDQW2",
+              "3ALaetFoUccoyTx7CSczmRptFbm1",
+              "s8K72kQzWJQTgSefTvFjF1aA7V43",
+              "F4yuKv3iTjO7eFRi51574OMdiHY2",
+              "fRsz3lYIeBMD7KKpgR2F6NhJl383"
+            ]);
+
+            if (uidPremierBall.has(usr.uid)) {
+              player.titles.add(Title.ARQUITETO1);
+            }
 
             if (usr.displayName === "Dog") {
               player.titles.add(Title.DOG)
@@ -716,6 +728,10 @@ export default class GameRoom extends Room<GameState> {
 
             if (usr.displayName === "Duckhead") {
               player.titles.add(Title.FIRST_1200)
+            }
+
+            if (usr.uid === "5AJIOdDWlzSq23BfBEzf6eKSDQW2") {
+              player.titles.add(Title.ARQUITETO1)
             }
 
             if (usr.elo != null && elligibleToELO) {
