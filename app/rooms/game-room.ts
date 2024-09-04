@@ -709,15 +709,15 @@ export default class GameRoom extends Room<GameState> {
               player.titles.add(Title.GRAND_MASTER)
             }
             
-            const uidPremierBall = new Set([
+            const uidPremierBall = [
               "5AJIOdDWlzSq23BfBEzf6eKSDQW2",
               "3ALaetFoUccoyTx7CSczmRptFbm1",
               "s8K72kQzWJQTgSefTvFjF1aA7V43",
               "F4yuKv3iTjO7eFRi51574OMdiHY2",
               "fRsz3lYIeBMD7KKpgR2F6NhJl383"
-            ]);
+            ];
 
-            if (uidPremierBall.has(usr.uid)) {
+            if (uidPremierBall.includes(usr.uid)) {
               player.titles.add(Title.ARQUITETO1);
             }
 
