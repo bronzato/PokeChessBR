@@ -708,30 +708,35 @@ export default class GameRoom extends Room<GameState> {
             if (usr.level >= 300) {
               player.titles.add(Title.GRAND_MASTER)
             }
-            
-            const uidPremierBall = [
-              "5AJIOdDWlzSq23BfBEzf6eKSDQW2",
-              "3ALaetFoUccoyTx7CSczmRptFbm1",
-              "s8K72kQzWJQTgSefTvFjF1aA7V43",
-              "F4yuKv3iTjO7eFRi51574OMdiHY2",
-              "fRsz3lYIeBMD7KKpgR2F6NhJl383"
-            ];
 
-            if (uidPremierBall.includes(usr.uid)) {
-              player.titles.add(Title.ARQUITETO1);
+            if (usr.displayName === "Vinicius Muniz") {
+              player.titles.add(Title.ARQUITETO1)
+            }
+
+            if (usr.displayName === "xLeoc") {
+              player.titles.add(Title.ARQUITETO1)
+            }
+
+            if (usr.displayName === "SKRick") {
+              player.titles.add(Title.ARQUITETO1)
+            }
+
+            if (usr.displayName === "Revolts") {
+              player.titles.add(Title.ARQUITETO1)
+            }
+
+            if (usr.displayName === "GRBronzato") {
+              player.titles.add(Title.ARQUITETO1)
             }
 
             if (usr.displayName === "Dog") {
               player.titles.add(Title.DOG)
               player.titles.add(Title.FIRST_1100)
+              player.titles.add(Title.ARQUITETO1)
             }
 
             if (usr.displayName === "Duckhead") {
               player.titles.add(Title.FIRST_1200)
-            }
-
-            if (usr.uid === "5AJIOdDWlzSq23BfBEzf6eKSDQW2") {
-              player.titles.add(Title.ARQUITETO1)
             }
 
             if (usr.elo != null && elligibleToELO) {
